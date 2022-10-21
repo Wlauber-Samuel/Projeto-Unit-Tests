@@ -18,15 +18,12 @@ const average = (arr) => {
   }
 
   for (let num of arr) {
-    console.log(num);
+
     if (typeof num !== 'number') {
       return undefined;
     }
-    console.log(arr);
-    console.log(arr.length);
     result += num;
-    console.log(result);
-    console.log(arr);
+
     var media = Math.round(result / arr.length);
   }
   return media;
