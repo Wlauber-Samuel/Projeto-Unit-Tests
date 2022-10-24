@@ -19,7 +19,6 @@
 */
 
 const vqv = (string, age) => {
-
 if (typeof string === 'string' && typeof age === 'number') {
   return `Oi, meu nome é ${string}!
 Tenho ${age} anos,
