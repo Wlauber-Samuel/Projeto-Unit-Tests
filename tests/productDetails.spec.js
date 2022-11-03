@@ -56,11 +56,40 @@ describe('6 - Implemente os casos de teste para a função `productDetails`', ()
 
   // Teste se quando passado parâmetros diferentes entre si, os dois objetos também são diferentes entre si.
   it('Verifica se quando passado parâmetros diferentes entre si, os dois objetos também são diferentes entre si', () => {
-    expect().toBe();
-  });
-
+    expect(productDetails('Água', 'Coca-Cola')).toStrictEqual(
+      [
+      {
+        name: 'Água',
+        details: {
+          productId: `${'Água'}123`,
+        }
+      },
+      {
+        name: 'Coca-Cola',
+        details: {
+          productId: `${'Coca-Cola'}123`,
+        }
+      }
+      ]
+    );
+    })
   // Teste se os dois productIds terminam com 123.
   it('Verifica se os dois productIds terminam com 123', () => {
-    expect().toBe(true);
-  });
+    expect(productDetails('Café', 'Coca-Cola')).toStrictEqual(
+      [
+        {
+          name: 'Café',
+          details: {
+            productId: `${'Café'}123`,
+          }
+        },
+        {
+          name: 'Coca-Cola',
+          details: {
+            productId: `${'Coca-Cola'}123`,
+          }
+        }
+        ]
+  );
+      })
 });
